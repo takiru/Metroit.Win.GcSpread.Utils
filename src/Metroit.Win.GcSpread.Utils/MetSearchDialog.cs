@@ -16,6 +16,7 @@ namespace Metroit.Win.GcSpread.Utils
         public MetSearchDialog()
         {
             InitializeComponent();
+            directionComboBox.SelectedIndex = 0;
         }
 
         /// <summary>

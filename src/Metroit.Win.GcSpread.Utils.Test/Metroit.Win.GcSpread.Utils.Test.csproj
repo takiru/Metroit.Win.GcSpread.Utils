@@ -12,4 +12,11 @@
     <ProjectReference Include="..\Metroit.Win.GcSpread.Utils\Metroit.Win.GcSpread.Utils.csproj" />
   </ItemGroup>
 
+  <Target Name="RemoveUnnecessaryWebView2References" AfterTargets="ResolvePackageDependenciesForBuild">
+    <ItemGroup>
+      <ReferenceToBeRemoved Include="@(Reference)" Condition="'%(Reference.FileName)' == 'Microsoft.Web.WebView2.WinForms' And '$(UseWindowsForms)' != 'true'" />
+      <ReferenceToBeRemoved Include="@(Reference)" Condition="'%(Reference.FileName)' == 'Microsoft.Web.WebView2.Wpf' And '$(UseWpf)' != 'true'" />
+      <Reference Remove="@(ReferenceToBeRemoved)" />
+    </ItemGroup>
+  </Target>
 </Project>
