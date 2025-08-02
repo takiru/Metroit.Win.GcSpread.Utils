@@ -1,36 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>net6.0-windows;net48</TargetFrameworks>
-    <Nullable>disable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>disable</ImplicitUsings>
-    <Authors>Takeru Yamaguchi</Authors>
-    <Description>Metroit.Win.GcSpread を利用したユーティリティです。</Description>
-    <Copyright>Copyright 2024 Takeru Yamaguchi.</Copyright>
-    <VersionPrefix>17.2.0.1</VersionPrefix>
-    <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
-    <FileVersion>$(VersionPrefix)</FileVersion>
-    <PackageProjectUrl>https://github.com/takiru/Metroit.Win.GcSpread.Utils</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/takiru/Metroit.Win.GcSpread.Utils</RepositoryUrl>
-    <PackageTags>Metroit;winforms;GrapeCity;GcSpread;spreadsheet;</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>$(AssemblyName).ja</PackageId>
-    <AutoGenerateBindingRedirects>False</AutoGenerateBindingRedirects>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-windows;net48</TargetFrameworks>
+		<Nullable>disable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Authors>Takeru Yamaguchi</Authors>
+		<Description>Metroit.Win.GcSpread を利用したユーティリティです。</Description>
+		<Copyright>Copyright 2024 Takeru Yamaguchi.</Copyright>
+		<VersionPrefix>17.2.0.1</VersionPrefix>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+		<PackageProjectUrl>https://github.com/takiru/Metroit.Win.GcSpread.Utils</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/takiru/Metroit.Win.GcSpread.Utils</RepositoryUrl>
+		<PackageTags>Metroit;winforms;GrapeCity;GcSpread;spreadsheet;</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageId>$(AssemblyName).ja</PackageId>
+		<AutoGenerateBindingRedirects>False</AutoGenerateBindingRedirects>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Metroit.Win.GcSpread.ja" Version="17.2.0.1" />
-    <PackageReference Include="Metroit.Windows.Forms" Version="3.1.5" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Metroit.Win.GcSpread.ja" Version="17.2.0.1" />
+		<PackageReference Include="Metroit.Windows.Forms" Version="3.1.5" />
+	</ItemGroup>
 
-  <Target Name="RemoveUnnecessaryWebView2References" AfterTargets="ResolvePackageDependenciesForBuild">
-    <ItemGroup>
-      <ReferenceToBeRemoved Include="@(Reference)" Condition="'%(Reference.FileName)' == 'Microsoft.Web.WebView2.WinForms' And '$(UseWindowsForms)' != 'true'" />
-      <ReferenceToBeRemoved Include="@(Reference)" Condition="'%(Reference.FileName)' == 'Microsoft.Web.WebView2.Wpf' And '$(UseWpf)' != 'true'" />
-      <Reference Remove="@(ReferenceToBeRemoved)" />
-    </ItemGroup>
-  </Target>
+	<Target Name="RemoveUnnecessaryWebView2References" AfterTargets="ResolvePackageDependenciesForBuild">
+		<ItemGroup>
+			<ReferenceToBeRemoved Include="@(Reference)" Condition="'%(Reference.FileName)' == 'Microsoft.Web.WebView2.WinForms' And '$(UseWindowsForms)' != 'true'" />
+			<ReferenceToBeRemoved Include="@(Reference)" Condition="'%(Reference.FileName)' == 'Microsoft.Web.WebView2.Wpf' And '$(UseWpf)' != 'true'" />
+			<Reference Remove="@(ReferenceToBeRemoved)" />
+		</ItemGroup>
+	</Target>
 </Project>

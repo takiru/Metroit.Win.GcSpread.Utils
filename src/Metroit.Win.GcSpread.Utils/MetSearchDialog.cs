@@ -16,7 +16,7 @@ namespace Metroit.Win.GcSpread.Utils
         public MetSearchDialog()
         {
             InitializeComponent();
-            directionComboBox.SelectedIndex = 0;
+            DirectionComboBox.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -24,9 +24,9 @@ namespace Metroit.Win.GcSpread.Utils
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void findButton_Click(object sender, EventArgs e)
+        private void FindButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(targetTextBox.Text))
+            if (string.IsNullOrEmpty(WordTextBox.Text))
             {
                 return;
             }
@@ -35,15 +35,15 @@ namespace Metroit.Win.GcSpread.Utils
                 return;
             }
 
-            if (directionComboBox.SelectedIndex == 0)
+            if (DirectionComboBox.SelectedIndex == 0)
             {
                 // 行方向へ検索
-                FindTextByRowDirection(targetTextBox.Text);
+                FindTextByRowDirection(WordTextBox.Text);
             }
             else
             {
                 // 列方向へ検索
-                FindTextByColumnDirection(targetTextBox.Text);
+                FindTextByColumnDirection(WordTextBox.Text);
             }
         }
 
@@ -52,7 +52,7 @@ namespace Metroit.Win.GcSpread.Utils
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void closeButton_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -199,15 +199,15 @@ namespace Metroit.Win.GcSpread.Utils
         {
             var compareOptions = CompareOptions.IgnoreCase | CompareOptions.IgnoreKanaType | CompareOptions.IgnoreWidth;
 
-            if (caseCheckBox.Checked)
+            if (CaseCheckBox.Checked)
             {
                 compareOptions ^= CompareOptions.IgnoreCase;
             }
-            if (kanaCheckBox.Checked)
+            if (KanaCheckBox.Checked)
             {
                 compareOptions ^= CompareOptions.IgnoreKanaType;
             }
-            if (widthCheckBox.Checked)
+            if (WidthCheckBox.Checked)
             {
                 compareOptions ^= CompareOptions.IgnoreWidth;
             }

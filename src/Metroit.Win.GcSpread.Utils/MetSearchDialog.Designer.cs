@@ -29,137 +29,137 @@ namespace Metroit.Win.GcSpread.Utils
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
-            targetTextBox = new Metroit.Windows.Forms.MetTextBox();
-            directionComboBox = new Metroit.Windows.Forms.MetComboBox();
-            findButton = new System.Windows.Forms.Button();
-            closeButton = new System.Windows.Forms.Button();
-            caseCheckBox = new System.Windows.Forms.CheckBox();
-            kanaCheckBox = new System.Windows.Forms.CheckBox();
-            widthCheckBox = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)targetTextBox).BeginInit();
+            WordTitleLabel = new System.Windows.Forms.Label();
+            DirectionTitleLabel = new System.Windows.Forms.Label();
+            WordTextBox = new Metroit.Windows.Forms.MetTextBox();
+            DirectionComboBox = new Metroit.Windows.Forms.MetComboBox();
+            FindButton = new System.Windows.Forms.Button();
+            CloseButton = new System.Windows.Forms.Button();
+            CaseCheckBox = new System.Windows.Forms.CheckBox();
+            KanaCheckBox = new System.Windows.Forms.CheckBox();
+            WidthCheckBox = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)WordTextBox).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // WordTitleLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(93, 15);
-            label1.TabIndex = 0;
-            label1.Text = "検索する文字列";
-            label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            WordTitleLabel.AutoSize = true;
+            WordTitleLabel.Location = new System.Drawing.Point(12, 9);
+            WordTitleLabel.Name = "WordTitleLabel";
+            WordTitleLabel.Size = new System.Drawing.Size(93, 15);
+            WordTitleLabel.TabIndex = 0;
+            WordTitleLabel.Text = "検索する文字列";
+            WordTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // DirectionTitleLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(46, 39);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 15);
-            label2.TabIndex = 1;
-            label2.Text = "検索方向";
-            label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            DirectionTitleLabel.AutoSize = true;
+            DirectionTitleLabel.Location = new System.Drawing.Point(46, 39);
+            DirectionTitleLabel.Name = "DirectionTitleLabel";
+            DirectionTitleLabel.Size = new System.Drawing.Size(59, 15);
+            DirectionTitleLabel.TabIndex = 1;
+            DirectionTitleLabel.Text = "検索方向";
+            DirectionTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // targetTextBox
+            // WordTextBox
             // 
-            targetTextBox.BaseBorderColor = System.Drawing.SystemColors.WindowFrame;
-            targetTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            WordTextBox.BaseBorderColor = System.Drawing.SystemColors.WindowFrame;
+            WordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             // 
             // 
             // 
-            targetTextBox.CustomAutoCompleteBox.TargetControl = targetTextBox;
-            targetTextBox.FocusBackColor = System.Drawing.Color.LemonChiffon;
-            targetTextBox.FocusBorderColor = System.Drawing.SystemColors.WindowFrame;
-            targetTextBox.Location = new System.Drawing.Point(111, 7);
-            targetTextBox.Name = "targetTextBox";
-            targetTextBox.Size = new System.Drawing.Size(320, 23);
-            targetTextBox.TabIndex = 10;
+            WordTextBox.CustomAutoCompleteBox.TargetControl = WordTextBox;
+            WordTextBox.FocusBackColor = System.Drawing.Color.LemonChiffon;
+            WordTextBox.FocusBorderColor = System.Drawing.SystemColors.WindowFrame;
+            WordTextBox.Location = new System.Drawing.Point(111, 7);
+            WordTextBox.Name = "WordTextBox";
+            WordTextBox.Size = new System.Drawing.Size(320, 23);
+            WordTextBox.TabIndex = 10;
             // 
-            // directionComboBox
+            // DirectionComboBox
             // 
-            directionComboBox.BaseBorderColor = System.Drawing.SystemColors.WindowFrame;
-            directionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            directionComboBox.FocusBackColor = System.Drawing.Color.LemonChiffon;
-            directionComboBox.FocusBorderColor = System.Drawing.SystemColors.WindowFrame;
-            directionComboBox.FormattingEnabled = true;
-            directionComboBox.Items.AddRange(new object[] { "行", "列" });
-            directionComboBox.Location = new System.Drawing.Point(111, 36);
-            directionComboBox.Name = "directionComboBox";
-            directionComboBox.Size = new System.Drawing.Size(63, 23);
-            directionComboBox.TabIndex = 20;
+            DirectionComboBox.BaseBorderColor = System.Drawing.SystemColors.WindowFrame;
+            DirectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            DirectionComboBox.FocusBackColor = System.Drawing.Color.LemonChiffon;
+            DirectionComboBox.FocusBorderColor = System.Drawing.SystemColors.WindowFrame;
+            DirectionComboBox.FormattingEnabled = true;
+            DirectionComboBox.Items.AddRange(new object[] { "行", "列" });
+            DirectionComboBox.Location = new System.Drawing.Point(111, 36);
+            DirectionComboBox.Name = "DirectionComboBox";
+            DirectionComboBox.Size = new System.Drawing.Size(63, 23);
+            DirectionComboBox.TabIndex = 20;
             // 
-            // findButton
+            // FindButton
             // 
-            findButton.Location = new System.Drawing.Point(143, 145);
-            findButton.Name = "findButton";
-            findButton.Size = new System.Drawing.Size(75, 23);
-            findButton.TabIndex = 60;
-            findButton.Text = "検索(&F)";
-            findButton.UseVisualStyleBackColor = true;
-            findButton.Click += findButton_Click;
+            FindButton.Location = new System.Drawing.Point(143, 145);
+            FindButton.Name = "FindButton";
+            FindButton.Size = new System.Drawing.Size(75, 23);
+            FindButton.TabIndex = 60;
+            FindButton.Text = "検索(&F)";
+            FindButton.UseVisualStyleBackColor = true;
+            FindButton.Click += FindButton_Click;
             // 
-            // closeButton
+            // CloseButton
             // 
-            closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            closeButton.Location = new System.Drawing.Point(224, 145);
-            closeButton.Name = "closeButton";
-            closeButton.Size = new System.Drawing.Size(75, 23);
-            closeButton.TabIndex = 70;
-            closeButton.Text = "閉じる";
-            closeButton.UseVisualStyleBackColor = true;
-            closeButton.Click += closeButton_Click;
+            CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            CloseButton.Location = new System.Drawing.Point(224, 145);
+            CloseButton.Name = "CloseButton";
+            CloseButton.Size = new System.Drawing.Size(75, 23);
+            CloseButton.TabIndex = 70;
+            CloseButton.Text = "閉じる";
+            CloseButton.UseVisualStyleBackColor = true;
+            CloseButton.Click += CloseButton_Click;
             // 
-            // caseCheckBox
+            // CaseCheckBox
             // 
-            caseCheckBox.AutoSize = true;
-            caseCheckBox.Location = new System.Drawing.Point(111, 65);
-            caseCheckBox.Name = "caseCheckBox";
-            caseCheckBox.Size = new System.Drawing.Size(169, 19);
-            caseCheckBox.TabIndex = 30;
-            caseCheckBox.Text = "大文字と小文字を区別する";
-            caseCheckBox.UseVisualStyleBackColor = true;
+            CaseCheckBox.AutoSize = true;
+            CaseCheckBox.Location = new System.Drawing.Point(111, 65);
+            CaseCheckBox.Name = "CaseCheckBox";
+            CaseCheckBox.Size = new System.Drawing.Size(169, 19);
+            CaseCheckBox.TabIndex = 30;
+            CaseCheckBox.Text = "大文字と小文字を区別する";
+            CaseCheckBox.UseVisualStyleBackColor = true;
             // 
-            // kanaCheckBox
+            // KanaCheckBox
             // 
-            kanaCheckBox.AutoSize = true;
-            kanaCheckBox.Location = new System.Drawing.Point(111, 90);
-            kanaCheckBox.Name = "kanaCheckBox";
-            kanaCheckBox.Size = new System.Drawing.Size(170, 19);
-            kanaCheckBox.TabIndex = 40;
-            kanaCheckBox.Text = "ひらがなとカタカナを区別する";
-            kanaCheckBox.UseVisualStyleBackColor = true;
+            KanaCheckBox.AutoSize = true;
+            KanaCheckBox.Location = new System.Drawing.Point(111, 90);
+            KanaCheckBox.Name = "KanaCheckBox";
+            KanaCheckBox.Size = new System.Drawing.Size(170, 19);
+            KanaCheckBox.TabIndex = 40;
+            KanaCheckBox.Text = "ひらがなとカタカナを区別する";
+            KanaCheckBox.UseVisualStyleBackColor = true;
             // 
-            // widthCheckBox
+            // WidthCheckBox
             // 
-            widthCheckBox.AutoSize = true;
-            widthCheckBox.Location = new System.Drawing.Point(111, 115);
-            widthCheckBox.Name = "widthCheckBox";
-            widthCheckBox.Size = new System.Drawing.Size(143, 19);
-            widthCheckBox.TabIndex = 50;
-            widthCheckBox.Text = "半角と全角を区別する";
-            widthCheckBox.UseVisualStyleBackColor = true;
+            WidthCheckBox.AutoSize = true;
+            WidthCheckBox.Location = new System.Drawing.Point(111, 115);
+            WidthCheckBox.Name = "WidthCheckBox";
+            WidthCheckBox.Size = new System.Drawing.Size(143, 19);
+            WidthCheckBox.TabIndex = 50;
+            WidthCheckBox.Text = "半角と全角を区別する";
+            WidthCheckBox.UseVisualStyleBackColor = true;
             // 
             // MetSearchDialog
             // 
-            AcceptButton = findButton;
+            AcceptButton = FindButton;
             AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            CancelButton = closeButton;
+            CancelButton = CloseButton;
             ClientSize = new System.Drawing.Size(443, 178);
-            Controls.Add(widthCheckBox);
-            Controls.Add(kanaCheckBox);
-            Controls.Add(caseCheckBox);
-            Controls.Add(closeButton);
-            Controls.Add(findButton);
-            Controls.Add(directionComboBox);
-            Controls.Add(targetTextBox);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(WidthCheckBox);
+            Controls.Add(KanaCheckBox);
+            Controls.Add(CaseCheckBox);
+            Controls.Add(CloseButton);
+            Controls.Add(FindButton);
+            Controls.Add(DirectionComboBox);
+            Controls.Add(WordTextBox);
+            Controls.Add(DirectionTitleLabel);
+            Controls.Add(WordTitleLabel);
             Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             KeyPreview = true;
             Name = "MetSearchDialog";
-            ((System.ComponentModel.ISupportInitialize)targetTextBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)WordTextBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -167,14 +167,41 @@ namespace Metroit.Win.GcSpread.Utils
 
         #endregion
 
-        protected System.Windows.Forms.Label label1;
-        protected System.Windows.Forms.Label label2;
-        protected Windows.Forms.MetTextBox targetTextBox;
-        protected Windows.Forms.MetComboBox directionComboBox;
-        protected System.Windows.Forms.Button findButton;
-        protected System.Windows.Forms.Button closeButton;
-        protected System.Windows.Forms.CheckBox caseCheckBox;
-        protected System.Windows.Forms.CheckBox kanaCheckBox;
-        protected System.Windows.Forms.CheckBox widthCheckBox;
+        /// <summary>
+        /// 検索する文字列タイトルラベルを取得または設定します。
+        /// </summary>
+        protected System.Windows.Forms.Label WordTitleLabel;
+        /// <summary>
+        /// 検索方向タイトルラベルを取得または設定します。
+        /// </summary>
+        protected System.Windows.Forms.Label DirectionTitleLabel;
+        /// <summary>
+        /// 検索文字列テキストエリアを取得または設定します。
+        /// </summary>
+        protected Windows.Forms.MetTextBox WordTextBox;
+        /// <summary>
+        /// 検索方向プルダウンエリアを取得または設定します。
+        /// </summary>
+        protected Windows.Forms.MetComboBox DirectionComboBox;
+        /// <summary>
+        /// 検索ボタンを取得または設定します。
+        /// </summary>
+        protected System.Windows.Forms.Button FindButton;
+        /// <summary>
+        /// 閉じるボタンを取得または設定します。
+        /// </summary>
+        protected System.Windows.Forms.Button CloseButton;
+        /// <summary>
+        /// 大文字と小文字を区別するチェックエリアを取得または設定します。
+        /// </summary>
+        protected System.Windows.Forms.CheckBox CaseCheckBox;
+        /// <summary>
+        /// ひらがなとカタカナを区別するチェックエリアを取得または設定します。
+        /// </summary>
+        protected System.Windows.Forms.CheckBox KanaCheckBox;
+        /// <summary>
+        /// 半角と全角を区別するチェックエリアを取得または設定します。
+        /// </summary>
+        protected System.Windows.Forms.CheckBox WidthCheckBox;
     }
 }
